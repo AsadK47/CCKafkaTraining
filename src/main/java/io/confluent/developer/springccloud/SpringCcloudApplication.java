@@ -100,7 +100,7 @@ class Processor {
         // We use 'groupBy' to ensure the words are available as message keys
         // Count the occurrences of each word (message key).
         KTable<String, Long> wordCounts = textLines
-                .flatMapValues(value -> Arrays.asList(value.toLowerCase().split("//W+")))
+                .flatMapValues(value -> Arrays.asList(value.toLowerCase().split("\\W+")))
                 .groupBy((key, value) -> value, Grouped.with(stringSerde, stringSerde))
                 .count();
 
