@@ -77,7 +77,6 @@ class Consumer {
 
 }
 
-@RequiredArgsConstructor
 @Component
 class Processor {
 
