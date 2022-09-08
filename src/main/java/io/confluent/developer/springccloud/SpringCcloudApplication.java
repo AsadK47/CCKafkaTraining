@@ -32,7 +32,7 @@ public class SpringCcloudApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringCcloudApplication.class, args);
     }
-    
+
     @Bean
     NewTopic hobbit2() {
         return TopicBuilder.name("hobbit2").partitions(15).replicas(3).build();
